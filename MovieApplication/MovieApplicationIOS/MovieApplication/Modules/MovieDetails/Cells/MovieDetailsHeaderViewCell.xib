@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailsHeaderViewCell" rowHeight="385" id="KGk-i7-Jjw" customClass="MovieDetailsHeaderViewCell" customModule="iosMovieApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="daE-vW-Soo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="289"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars: The Last Jedi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVg-dc-O4e">
+                        <rect key="frame" x="24" y="313" width="256" height="29"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Tagline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GK-0F-9kg">
+                        <rect key="frame" x="24" y="354" width="256" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.73725491759999995" green="0.73725503680000004" blue="0.73725491759999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="daE-vW-Soo" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="5TL-fS-Buz"/>
+                    <constraint firstItem="WVg-dc-O4e" firstAttribute="leading" secondItem="daE-vW-Soo" secondAttribute="leading" constant="24" id="Le6-lu-tvU"/>
+                    <constraint firstItem="8GK-0F-9kg" firstAttribute="top" secondItem="WVg-dc-O4e" secondAttribute="bottom" constant="12" id="THg-aW-ECh"/>
+                    <constraint firstItem="WVg-dc-O4e" firstAttribute="top" secondItem="daE-vW-Soo" secondAttribute="bottom" constant="24" id="VtY-3H-Xig"/>
+                    <constraint firstItem="8GK-0F-9kg" firstAttribute="leading" secondItem="WVg-dc-O4e" secondAttribute="leading" id="eG8-5a-wlj"/>
+                    <constraint firstItem="daE-vW-Soo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gAP-bQ-Res"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8GK-0F-9kg" secondAttribute="trailing" constant="24" id="j4x-sq-Ydo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WVg-dc-O4e" secondAttribute="trailing" constant="24" id="jwB-cb-82W"/>
+                    <constraint firstItem="daE-vW-Soo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="rEt-ai-8Uu"/>
+                    <constraint firstItem="daE-vW-Soo" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="skc-2f-zkg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="headerImage" destination="daE-vW-Soo" id="9dO-yQ-Lak"/>
+                <outlet property="movieTitle" destination="WVg-dc-O4e" id="Ogf-qY-V4v"/>
+                <outlet property="tagline" destination="8GK-0F-9kg" id="VGz-vn-R2H"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="110.82589285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="moviePlaceholder" width="270" height="400"/>
+    </resources>
+</document>

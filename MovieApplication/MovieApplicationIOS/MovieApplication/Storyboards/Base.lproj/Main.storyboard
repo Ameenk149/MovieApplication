@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trending Movies View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TrendingMoviesViewController" id="BYZ-38-t0r" customClass="TrendingMoviesViewController" customModule="iosMovieApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wc8-dE-sgM">
+                                <rect key="frame" x="149.5" y="75.5" width="115" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Movie">
+                                        <attributes>
+                                            <color key="NSColor" red="0.90082329510000003" green="0.41380330920000002" blue="0.31759563089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" App">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="25"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-bk-tNY">
+                                <rect key="frame" x="20" y="171.5" width="370" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Trending">
+                                        <attributes>
+                                            <color key="NSColor" red="0.90082329510000003" green="0.41380330920000002" blue="0.31759563089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="25" name="ArialNarrow"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Movies">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="25" name="ArialNarrow"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YZj-eV-thz">
+                                <rect key="frame" x="0.0" y="230.5" width="414" height="445"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aDN-M5-Tsw">
+                                    <size key="itemSize" width="312" height="403"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Kgb-zi-s5E"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="twU-Q6-DeM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.08293627948" green="0.077514804899999998" blue="0.1176519617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Wc8-dE-sgM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Kw-2Z-F15"/>
+                            <constraint firstItem="YZj-eV-thz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CJ3-tP-F5q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o3A-bk-tNY" secondAttribute="trailing" constant="24" id="MZw-OP-zqA"/>
+                            <constraint firstItem="o3A-bk-tNY" firstAttribute="top" secondItem="Wc8-dE-sgM" secondAttribute="bottom" multiplier="1.625" id="aa3-aX-amk"/>
+                            <constraint firstItem="Wc8-dE-sgM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.2" id="fW2-JH-h7O"/>
+                            <constraint firstItem="YZj-eV-thz" firstAttribute="top" secondItem="o3A-bk-tNY" secondAttribute="bottom" constant="29" id="knp-nN-Uui"/>
+                            <constraint firstItem="YZj-eV-thz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="q9U-ya-8ss"/>
+                            <constraint firstItem="YZj-eV-thz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sMH-E4-bg4"/>
+                            <constraint firstItem="o3A-bk-tNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sj8-Zx-nVB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="trendingMovies_collectionView" destination="YZj-eV-thz" id="qeo-Ne-0XN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="KX5-oA-Aam">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="c77-B2-xbw" customClass="MovieDetailsViewController" customModule="iosMovieApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGb-Ag-hnf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CKl-ZY-gW7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c77-B2-xbw" id="M5q-Lq-fe2"/>
+                                    <outlet property="delegate" destination="c77-B2-xbw" id="TTG-Pg-uCu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="25z-Az-M5g"/>
+                        <color key="backgroundColor" red="0.083329103890000006" green="0.076387576760000006" blue="0.1208874509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CKl-ZY-gW7" firstAttribute="centerX" secondItem="25z-Az-M5g" secondAttribute="centerX" id="C9c-Ey-pf1"/>
+                            <constraint firstItem="CKl-ZY-gW7" firstAttribute="width" secondItem="hGb-Ag-hnf" secondAttribute="width" id="NRS-xT-Qny"/>
+                            <constraint firstItem="CKl-ZY-gW7" firstAttribute="top" secondItem="hGb-Ag-hnf" secondAttribute="top" id="btf-NW-we8"/>
+                            <constraint firstAttribute="bottom" secondItem="CKl-ZY-gW7" secondAttribute="bottom" id="w6F-of-Dg0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieDetailsTableView" destination="CKl-ZY-gW7" id="XKe-Uc-Jhr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="744-Qw-4lW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="74"/>
+        </scene>
+    </scenes>
+</document>
